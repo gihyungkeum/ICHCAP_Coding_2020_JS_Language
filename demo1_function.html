@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function numbering(){
+        var i = 0;
+        while(i < 10){
+            document.write(i+'<br>');
+            i += 1;
+        }
+      }
+      numbering();
+    </script>
+  </body>
+</html>
+
+
+// # 출력 return
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function get_member1(){
+          return 'egoing';
+      }
+
+      function get_member2(){
+          return 'k8805';
+      }
+
+      alert(get_member1());
+      alert(get_member2());
+
+      document.write('------ 복수 리턴값 경우-----')
+
+      function get_member(){
+          return 'egoing';
+          return 'k8805';
+          return 'sorialgi';
+      }
+      alert(get_member());
+
+    </script>
+  </body>
+</html>
+
+# 입력 : 매개변수(parameter) 인자(argument)  ...> 복수 인자 입력가능하나 return 값은 하나
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+
+    function get_argument(arg){
+        return arg;
+    }
+
+    alert(get_argument(1));
+    alert(get_argument(2));
+
+    document.write('------ 입력 값-----')
+
+    function get_arguments(arg1, arg2){
+        return arg1 + arg2
+    }
+
+    alert(get_arguments(10, 20));
+    alert(get_arguments(20, 30));
+      </script>
+  </body>
+</html>
+
+
+# 함수를 정의하는 다른 방법 들
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var numbering = function (){
+  // 위 변수에 함수를 할당한 형식은 function numbering(){ 과 같은 의미
+          i = 0;
+          while(i < 10){
+              document.write(i);
+              i += 1;
+          }
+      }
+      numbering();
+    </script>
+  </body>
+</html>
+
+# 익명함수 - 함수 정의와 호출을 동시에 하는 형태
+
+ (function(){
+   i=0;
+   while(i<10){
+     document.write(i);
+     i+=1;
+   }
+ })();

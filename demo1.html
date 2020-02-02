@@ -1,0 +1,208 @@
+# ID 조건문
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        var id = prompt('아이디를 입력해주세요.')
+        if(id=='ghk'){
+            alert('아이디가 일치 합니다.')
+        } else {
+            alert('아이디가 일치하지 않습니다.')
+        }
+    </script>
+</body>
+</html>
+
+<br>
+
+# ID, Pass word 조건문 중첩
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        var id = prompt('아이디를 입력해주세요.');
+        if(id==='ghk'){
+            var password = prompt('비밀번호를 입력해주세요.');
+            if(password==='ichcap'){
+                alert('인증 했습니다.');
+            } else {
+                alert('인증에 실패 했습니다.');
+            }
+        } else {
+            alert('인증에 실패 했습니다.');
+        }
+    </script>
+</body>
+</html>
+
+<br>
+
+# 1. 논리 연산자 (&&)
+
+if(true && true){
+    alert(1);
+}
+if(true && false){
+    alert(2);
+}
+if(false && true){
+    alert(3);
+}
+if(false && false){
+    alert(4);
+}
+
+-------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        var id = prompt('아이디를 입력해주세요.');
+        var password = prompt('비밀번호를 입력해주세요.');
+        if(id=='egoing' && password=='111111'){
+            alert('인증 했습니다.');
+        } else {
+            alert('인증에 실패 했습니다.');
+        }
+    </script>
+</body>
+</html>
+
+# 2. 논리 연산자 (||)
+
+if(true || true){
+    alert(1);
+}
+if(true || false){
+    alert(2);
+}
+if(false || true){
+    alert(3);
+}
+if(false || false){
+    alert(4);
+}
+
+---------------------------------------
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+      var id = prompt('아이디를 입력해주세요.');
+      if(id==='egoing' || id==='k8805' || id==='sorialgi'){
+          alert('인증 했습니다.');
+      } else {
+          alert('인증에 실패 했습니다.');
+      }
+
+    </script>
+  </body>
+</html>
+
+# 3. 논리 연산자 (|| + &&)
+<br>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    var id = prompt('아이디를 입력해주세요.');
+    var password = prompt('비밀번호를 입력해주세요.');
+      if((id==='egoing' || id==='k8805' || id==='sorialgi') && password==='111111'){
+          alert('인증 했습니다.');
+      } else {
+          alert('인증에 실패 했습니다.');
+      }
+    </script>
+  </body>
+</html>
+
+<br>
+# 4. 논리연산자 (!)
+<br>
+if(!true && !true){
+    alert(1);
+}
+if(!false && !true){
+    alert(2);
+}
+if(!true && !false){
+    alert(3);
+}
+if(!false && !false){
+    alert(4);
+}
+
+<br>
+# boolean 대체재
+<br>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      if(0){
+        alert(1)
+      }
+
+      if(1){
+        alert(2)
+      }
+    </script>
+  </body>
+</html>
+<br>
+# 기타 false로 간주되는 데이타형
+<br>
+<!DOCTYPE html>11
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      if(!''){
+            alert('빈 문자열')
+        }
+        if(!undefined){
+            alert('undefined');
+        }
+        var a;
+        if(!a){
+            alert('값이 할당되지 않은 변수');
+        }
+        if(!null){
+            alert('null');
+        }
+        if(!NaN){
+            alert('NaN');
+        }
+    </script>
+  </body>
+</html>
